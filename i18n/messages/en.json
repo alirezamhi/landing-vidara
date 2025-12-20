@@ -1,0 +1,49 @@
+{
+  "header": {
+    "login": "Login",
+    "signup": "Sign up"
+  },
+  "hero": {
+    "badge": "Future-ready SaaS for media organizations",
+    "title": "Where Your Content Comes Alive",
+    "subtitle": "A clear, modern and structured platform to manage, process and publish media assets at scale.",
+    "ctaPrimary": "Get started",
+    "ctaSecondary": "Request a demo",
+    "note": "Control, clarity and organization — built for enterprise scale.",
+    "mockTitle": "Vidara Dashboard",
+    "mockHint": "Media flow, organized and clear",
+    "mockDesc": "Upload → Smart Enrichment → Search & Manage → Publish"
+  },
+  "features": {
+    "title": "Vidara Core Capabilities",
+    "subtitle": "A powerful combination of DAM, AI and automation for organizations working with media at scale.",
+    "items": {
+      "ai": {
+        "title": "AI-powered Enrichment",
+        "desc": "Transcription, OCR, tagging and smart search to boost speed and accuracy."
+      },
+      "dam": {
+        "title": "Enterprise DAM",
+        "desc": "Structure, permissions and lifecycle management for your media assets."
+      },
+      "workflow": {
+        "title": "Workflow & Automation",
+        "desc": "Extensible workflows for review, approval and operational control."
+      },
+      "publish": {
+        "title": "Publishing & Monetization",
+        "desc": "Multi-channel publishing, portals and content monetization paths."
+      }
+    },
+    "ctaBox": {
+      "title": "Ready to organize and energize your media?",
+      "desc": "Vidara brings clarity and control to your content ecosystem.",
+      "button": "Login / Sign up"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Vidara. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}
