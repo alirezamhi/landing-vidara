@@ -3,6 +3,13 @@
     "login": "ورود",
     "signup": "ثبت‌نام"
   },
+  "slider":{
+    "multiAssetsManagementDescription":"مدیریت و آرشیو هوشمند محتوا",
+    "SmartSearchAndAdvancedContentDescription":"جستجوی هوشمند و پیشرفته محتوا",
+    "IntelligentContentProcessingDescription":"پردازش هوشمند محتوا",
+    "TeamInteractionAndCollaboration":"تعامل و همکاری تیمی",
+    "FastAndMultiChannelPublishing":"انتشار سریع و چندکاناله"
+  },
   "hero": {
     "badge": "پلتفرم SaaS آینده‌نگر برای رسانه",
     "title": "ویدارا؛ نظم و جان‌بخشی به رسانه",

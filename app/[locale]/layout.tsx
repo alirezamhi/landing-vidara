@@ -2,6 +2,7 @@ import '../globals.css'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { locales } from '@/i18n/config' // دقت: i18n نه i18m
+import { yekanBakhFaNum } from '@/src/lib/fonts'
 
 type Params = Promise<{ locale: string }>
 
@@ -19,7 +20,7 @@ export default async function LocaleLayout({
   const messages = (await import(`@/i18n/messages/${locale}.json`)).default
 
   return (
-    <html lang={locale} dir={locale === 'en' ? 'ltr' : 'rtl'}>
+    <html lang={locale} dir={locale === 'en' ? 'ltr' : 'rtl'} className={yekanBakhFaNum.variable}>
       <body className="min-h-screen bg-white text-slate-900 antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

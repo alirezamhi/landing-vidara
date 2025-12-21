@@ -3,6 +3,13 @@
     "login": "Login",
     "signup": "Sign up"
   },
+    "slider": {
+    "multiAssetsManagementDescription": "Smart Content Management and Archiving",
+    "SmartSearchAndAdvancedContentDescription": "Smart and Advanced Content Search",
+    "IntelligentContentProcessingDescription": "Intelligent Content Processing",
+    "TeamInteractionAndCollaboration": "Team Interaction and Collaboration",
+    "FastAndMultiChannelPublishing": "Fast and Multi-Channel Publishing"
+  },
   "hero": {
     "badge": "Future-ready SaaS for media organizations",
     "title": "Where Your Content Comes Alive",

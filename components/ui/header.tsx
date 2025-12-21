@@ -11,6 +11,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { locales } from '@/i18n/config'
+import Image from 'next/image'
 
 const APP_URL = 'https://vidara.media'
 
@@ -36,10 +37,18 @@ export default function Header() {
     locale === 'fa' ? 'FA' : locale === 'en' ? 'EN' : 'AR'
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link href={`/${locale}`} className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-primary" aria-hidden />
+          <span className="relative h-9 w-9 overflow-hidden rounded-xl">
+    <Image
+      src="/vidaraLogo.svg"
+      alt="Vidara"
+      fill
+      className="object-contain p-1.5"
+      priority
+    />
+  </span>
           <span className="text-lg font-semibold tracking-tight text-slate-900">
             Vidara
           </span>
@@ -49,7 +58,7 @@ export default function Header() {
           {/* Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="h-9 px-3">
+              <Button variant="outline" className="h-9 px-3 border-gray-300">
                 {langLabel}
               </Button>
             </DropdownMenuTrigger>
@@ -74,7 +83,6 @@ export default function Header() {
           </Button>
 
           <Button
-            asChild
             className="h-9 bg-primary text-white hover:bg-primary-dark"
           >
             <a href={APP_URL}>{t('signup')}</a>

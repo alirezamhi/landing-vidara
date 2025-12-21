@@ -2,13 +2,28 @@
 
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
+import ProductSnapshotCarousel from '@/components/ui/product-snapshot-carousel'
 
 export default function Hero() {
   const t = useTranslations('hero')
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-20 md:grid-cols-2 md:py-24">
+    <section className="relative overflow-hidden bg-background">
+            <div aria-hidden className="pointer-events-none absolute inset-0">
+        {/* Base soft gradient wash */}
+        <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_20%_20%,rgba(0,159,217,0.18)_0%,transparent_60%),radial-gradient(70%_55%_at_80%_30%,rgba(3,83,112,0.14)_0%,transparent_55%),radial-gradient(60%_55%_at_60%_90%,rgba(0,159,217,0.10)_0%,transparent_60%)]" />
+
+        {/* Diagonal highlight */}
+        <div className="absolute -inset-[40%] rotate-[-12deg] bg-[linear-gradient(90deg,transparent_0%,rgba(0,159,217,0.10)_35%,rgba(3,83,112,0.10)_55%,transparent_85%)]" />
+
+        {/* Subtle pattern (optional): keep very low opacity */}
+        <div className="absolute inset-0 opacity-[0.06] [mask-image:radial-gradient(60%_60%_at_50%_30%,#000_0%,transparent_70%)] bg-[linear-gradient(to_right,rgba(2,132,199,0.35)_1px,transparent_1px),linear-gradient(to_bottom,rgba(2,132,199,0.35)_1px,transparent_1px)] bg-[size:28px_28px]" />
+
+        {/* Noise overlay (requires /public/noise.svg) */}
+        <div className="absolute inset-0 opacity-[0.10] mix-blend-soft-light bg-[url(/noise.svg)]" />
+      </div>
+
+      <div className="relative mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-20 md:grid-cols-2 md:py-24">
         <div className="flex flex-col justify-center">
           <p className="mb-3 inline-flex w-fit rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">
             {t('badge')}
@@ -26,7 +41,7 @@ export default function Hero() {
             <Button className="bg-primary text-white hover:bg-primary-dark" size="lg">
               {t('ctaPrimary')}
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" >
               {t('ctaSecondary')}
             </Button>
           </div>
@@ -37,45 +52,8 @@ export default function Hero() {
         </div>
 
         {/* Visual / Mock placeholder */}
-        <div className="relative">
-          <div className="absolute -left-10 -top-10 h-48 w-48 rounded-full bg-primary/15 blur-2xl" />
-          <div className="absolute -bottom-10 -right-10 h-48 w-48 rounded-full bg-primary-dark/15 blur-2xl" />
+      <ProductSnapshotCarousel />
 
-          <div className="relative rounded-2xl border bg-white p-4 shadow-sm">
-            <div className="flex items-center justify-between border-b pb-3">
-              <div className="flex items-center gap-2">
-                <div className="h-3 w-3 rounded-full bg-slate-200" />
-                <div className="h-3 w-3 rounded-full bg-slate-200" />
-                <div className="h-3 w-3 rounded-full bg-slate-200" />
-              </div>
-              <div className="text-xs text-slate-500">{t('mockTitle')}</div>
-            </div>
-
-            <div className="mt-4 grid gap-3">
-              <div className="rounded-xl bg-slate-50 p-4">
-                <div className="mb-2 h-3 w-24 rounded bg-slate-200" />
-                <div className="h-3 w-40 rounded bg-slate-200" />
-              </div>
-              <div className="rounded-xl bg-slate-50 p-4">
-                <div className="mb-2 h-3 w-28 rounded bg-slate-200" />
-                <div className="h-3 w-44 rounded bg-slate-200" />
-              </div>
-              <div className="rounded-xl bg-slate-50 p-4">
-                <div className="mb-2 h-3 w-20 rounded bg-slate-200" />
-                <div className="h-3 w-36 rounded bg-slate-200" />
-              </div>
-            </div>
-
-            <div className="mt-4 rounded-xl bg-gradient-to-r from-primary/10 to-primary-dark/10 p-4">
-              <div className="text-sm font-medium text-slate-800">
-                {t('mockHint')}
-              </div>
-              <div className="mt-1 text-xs text-slate-600">
-                {t('mockDesc')}
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

@@ -1,3 +1,104 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* shadcn/tailwind v4 pattern */
+@custom-variant dark (&:is(.dark *));
+
+/* 1) Raw design tokens (brand) */
+@layer base {
+  :root {
+    /* Vidara brand colors (from your tailwind.config) */
+    --vidara-primary: 217.2 91.2% 59.8%;      /* #009FD9 */
+    --vidara-primary-dark: 220.2 83.2% 53.3%;  /* #035370 */
+
+    /* Neutral system (light) */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    /* 2) shadcn semantic tokens */
+    --primary: var(--vidara-primary);
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: var(--muted);
+    --secondary-foreground: var(--foreground);
+
+    --accent: 196 100% 95%;
+    --accent-foreground: var(--foreground);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: var(--vidara-primary);
+
+    /* Radius */
+    --radius: 14px;
+  }
+
+  /* Optional dark mode (if you ever enable it) */
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary-foreground: 210 40% 98%;
+    --accent-foreground: 210 40% 98%;
+    --destructive-foreground: 210 40% 98%;
+    --ring: var(--vidara-primary);
+  }
+
+  /* Base page defaults */
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+/* 3) Tailwind v4 theme variables => utilities like bg-primary, bg-primary-dark, etc.
+   Note: using "@theme inline" is important when mapping to runtime variables. */
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-dark: hsl(var(--vidara-primary-dark));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --radius-lg: var(--radius);
+}

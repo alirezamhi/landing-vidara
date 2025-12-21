@@ -3,6 +3,13 @@
     "login": "تسجيل الدخول",
     "signup": "إنشاء حساب"
   },
+   "slider": {
+    "multiAssetsManagementDescription": "إدارة وأرشفة المحتوى الذكية",
+    "SmartSearchAndAdvancedContentDescription": "البحث الذكي والمتقدم في المحتوى",
+    "IntelligentContentProcessingDescription": "المعالجة الذكية للمحتوى",
+    "TeamInteractionAndCollaboration": "التفاعل والتعاون الجماعي",
+    "FastAndMultiChannelPublishing": "النشر السريع ومتعدد القنوات"
+  },
   "hero": {
     "badge": "منصة SaaS مستقبلية للمؤسسات الإعلامية",
     "title": "حيث يصبح المحتوى حيّاً",
