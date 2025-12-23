@@ -36,6 +36,18 @@ export default function Header() {
   const langLabel =
     locale === 'fa' ? 'FA' : locale === 'en' ? 'EN' : 'AR'
 
+
+  const onClickLogin = () => {
+    const origin = window.location.origin 
+    const url = new URL('/bpms/app/mediaExplorer/default/login', origin).toString()   
+    window.location.assign(url)    
+  }  
+
+  const onClickRegister = () => {
+    const url = new URL('/bpms/app/mediaExplorer/default/register', window.location.origin).toString()
+    window.location.assign(url) // همان تب، با امکان Back
+  }  
+
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
@@ -78,14 +90,15 @@ export default function Header() {
           <div className="mx-1 h-6 w-px bg-slate-200" />
 
           {/* Login / Signup */}
-          <Button variant="ghost" asChild className="h-9">
-            <a href={APP_URL}>{t('login')}</a>
+          <Button variant="ghost" asChild className="h-9 text-gray-900 cursor-pointer" onClick={onClickLogin}>
+            <p>{t('login')}</p>
           </Button>
 
           <Button
-            className="h-9 bg-primary text-white hover:bg-primary-dark"
+            className="h-9 bg-primary text-white hover:bg-primary-dark cursor-pointer"
+             onClick={onClickRegister}
           >
-            <a href={APP_URL}>{t('signup')}</a>
+            <p>{t('signup')}</p>
           </Button>
         </div>
       </div>

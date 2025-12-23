@@ -1,17 +1,22 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-
+import { Sparkles, FolderOpen, Workflow, Send } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 function FeatureCard({
   title,
   desc,
+  Icon,
 }: {
   title: string
   desc: string
+  Icon: LucideIcon
 }) {
   return (
     <div className="rounded-2xl border bg-white p-6 shadow-sm">
-      <div className="mb-4 h-10 w-10 rounded-xl bg-primary/10" aria-hidden />
+      <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10" aria-hidden>
+        <Icon className="h-5 w-5 text-primary" aria-hidden />
+      </div>
       <h3 className="text-lg font-semibold tracking-tight">{title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-slate-600">{desc}</p>
     </div>
@@ -34,10 +39,10 @@ export default function Features() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <FeatureCard title={t('items.ai.title')} desc={t('items.ai.desc')} />
-          <FeatureCard title={t('items.dam.title')} desc={t('items.dam.desc')} />
-          <FeatureCard title={t('items.workflow.title')} desc={t('items.workflow.desc')} />
-          <FeatureCard title={t('items.publish.title')} desc={t('items.publish.desc')} />
+          <FeatureCard title={t('items.ai.title')} desc={t('items.ai.desc')} Icon={Sparkles}/>
+          <FeatureCard title={t('items.dam.title')} desc={t('items.dam.desc')} Icon={FolderOpen}/>
+          <FeatureCard title={t('items.workflow.title')} desc={t('items.workflow.desc')}  Icon={Workflow}/>
+          <FeatureCard title={t('items.publish.title')} desc={t('items.publish.desc')} Icon={Send}/>
         </div>
 
         <div className="mt-10 rounded-2xl border bg-slate-50 p-6 md:p-8">

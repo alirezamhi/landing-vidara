@@ -41,17 +41,17 @@ export default function ProductSnapshotCarousel() {
   const SLIDES: Slide[] = [
     {
       src: '/showAssets.webp',
-      title: t('multiAssetsManagementTitle'),
+      title: '',
       description: t('multiAssetsManagementDescription'),
     },
     {
       src: '/searching.webp',
-      title: t('SmartSearchAndAdvancedContentTitle'),
+      title: '',
       description: t('SmartSearchAndAdvancedContentDescription'),
     },
     {
       src: '/samimDam.webp',
-      title: t('IntelligentContentProcessing'),
+      title: '',
       description: t('IntelligentContentProcessingDescription'),
     },
     {

@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
 import ProductSnapshotCarousel from '@/components/ui/product-snapshot-carousel'
+import Link from "next/link"
 
 export default function Hero() {
   const t = useTranslations('hero')
@@ -38,11 +39,15 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button className="bg-primary text-white hover:bg-primary-dark" size="lg">
-              {t('ctaPrimary')}
+            <Button className="bg-primary text-white hover:bg-primary-dark cursor-pointer" size="lg">
+              <a
+                href="https://vidara.media"
+              >
+                {t('ctaPrimary')}
+              </a>
             </Button>
-            <Button variant="outline" size="lg" >
-              {t('ctaSecondary')}
+            <Button variant="outline" size="lg" className='border-gray-300 cursor-pointer' >
+              <Link href="https://samimsolutions.com/digital-asset-management/#form-section" target="_blank" rel="noopener noreferrer">{t('ctaSecondary')}</Link>
             </Button>
           </div>
 
