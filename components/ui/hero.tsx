@@ -7,22 +7,23 @@ import Link from "next/link"
 
 export default function Hero() {
   const t = useTranslations('hero')
-
+    const onClickRegister = () => {
+    const url = new URL('/bpms/app/mediaExplorer/default/register', window.location.origin).toString()
+    window.location.assign(url) // همان تب، با امکان Back
+  }  
   return (
     <section className="relative overflow-hidden bg-background">
-            <div aria-hidden className="pointer-events-none absolute inset-0">
-        {/* Base soft gradient wash */}
-        <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_20%_20%,rgba(0,159,217,0.18)_0%,transparent_60%),radial-gradient(70%_55%_at_80%_30%,rgba(3,83,112,0.14)_0%,transparent_55%),radial-gradient(60%_55%_at_60%_90%,rgba(0,159,217,0.10)_0%,transparent_60%)]" />
+<div aria-hidden className="pointer-events-none absolute inset-0">
+  {/* Base soft gradient wash (فیروزه‌ای پررنگ‌تر) */}
+  <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_20%_20%,rgba(14,165,233,0.30)_0%,transparent_60%),radial-gradient(70%_55%_at_80%_30%,rgba(6,182,212,0.24)_0%,transparent_55%),radial-gradient(60%_55%_at_60%_90%,rgba(2,132,199,0.20)_0%,transparent_60%)]" />
 
-        {/* Diagonal highlight */}
-        <div className="absolute -inset-[40%] rotate-[-12deg] bg-[linear-gradient(90deg,transparent_0%,rgba(0,159,217,0.10)_35%,rgba(3,83,112,0.10)_55%,transparent_85%)]" />
+  {/* Diagonal highlight (فیروزه‌ای رنگ قوی‌تر) */}
+  <div className="absolute -inset-[40%] rotate-[-12deg] bg-[linear-gradient(90deg,transparent_0%,rgba(14,165,233,0.20)_35%,rgba(6,182,212,0.18)_55%,transparent_85%)]" />
 
-        {/* Subtle pattern (optional): keep very low opacity */}
-        <div className="absolute inset-0 opacity-[0.06] [mask-image:radial-gradient(60%_60%_at_50%_30%,#000_0%,transparent_70%)] bg-[linear-gradient(to_right,rgba(2,132,199,0.35)_1px,transparent_1px),linear-gradient(to_bottom,rgba(2,132,199,0.35)_1px,transparent_1px)] bg-[size:28px_28px]" />
+  {/* Subtle pattern (فیروزه‌ای با opacity کم) */}
+  <div className="absolute inset-0 opacity-[0.08] [mask-image:radial-gradient(60%_60%_at_50%_30%,#000_0%,transparent_70%)] bg-[linear-gradient(to_right,rgba(14,165,233,0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgba(14,165,233,0.45)_1px,transparent_1px)] bg-[size:28px_28px]" />
+</div>
 
-        {/* Noise overlay (requires /public/noise.svg) */}
-        <div className="absolute inset-0 opacity-[0.10] mix-blend-soft-light bg-[url(/noise.svg)]" />
-      </div>
 
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-20 md:grid-cols-2 md:py-24">
         <div className="flex flex-col justify-center">
@@ -30,7 +31,7 @@ export default function Hero() {
             {t('badge')}
           </p>
 
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+          <h1 className="whitespace-nowrap text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
             {t('title')}
           </h1>
 
@@ -39,12 +40,10 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button className="bg-primary text-white hover:bg-primary-dark cursor-pointer" size="lg">
-              <a
-                href="https://vidara.media"
-              >
+            <Button className="bg-primary text-white hover:bg-primary-dark cursor-pointer" size="lg" onClick={onClickRegister}>
+              
                 {t('ctaPrimary')}
-              </a>
+              
             </Button>
             <Button variant="outline" size="lg" className='border-gray-300 cursor-pointer' >
               <Link href="https://samimsolutions.com/digital-asset-management/#form-section" target="_blank" rel="noopener noreferrer">{t('ctaSecondary')}</Link>

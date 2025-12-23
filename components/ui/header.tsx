@@ -36,6 +36,10 @@ export default function Header() {
   const langLabel =
     locale === 'fa' ? 'FA' : locale === 'en' ? 'EN' : 'AR'
 
+  const logoSrc =
+    locale !== 'en'
+      ? '/Vidara-Logo-fa.png'
+      : '/Vidara-Logo-en.png'
 
   const onClickLogin = () => {
     const origin = window.location.origin 
@@ -51,19 +55,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href={`/${locale}`} className="flex items-center gap-2">
-          <span className="relative h-9 w-9 overflow-hidden rounded-xl">
+        <Link href={`/${locale}`} className="flex items-center gap-2 h-10 w-30">
+          <span className="relative h-full w-full overflow-hidden rounded-xl">
     <Image
-      src="/vidaraLogo.svg"
+      src={logoSrc}
       alt="Vidara"
+      className="h-full w-full "
       fill
-      className="object-contain p-1.5"
-      priority
     />
   </span>
-          <span className="text-lg font-semibold tracking-tight text-slate-900">
-            Vidara
-          </span>
         </Link>
 
         <div className="flex items-center gap-2">

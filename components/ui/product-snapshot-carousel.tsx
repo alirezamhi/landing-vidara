@@ -41,27 +41,27 @@ export default function ProductSnapshotCarousel() {
   const SLIDES: Slide[] = [
     {
       src: '/showAssets.webp',
-      title: '',
+      title: t('MultimediaDocumentManagement'),
       description: t('multiAssetsManagementDescription'),
     },
     {
       src: '/searching.webp',
-      title: '',
+      title: t('SearchAndQuickAccessToContent'),
       description: t('SmartSearchAndAdvancedContentDescription'),
     },
     {
       src: '/samimDam.webp',
-      title: '',
+      title: t('IntelligentContentProcessing'),
       description: t('IntelligentContentProcessingDescription'),
     },
     {
       src: '/network.webp',
-      title: 'ai',
+      title: t('TeamInteractionOnContent'),
       description: t('TeamInteractionAndCollaboration'),
     },
     {
       src: '/vidaraDam.webp',
-      title: 'ai',
+      title: t('FastAndMultiChannelPublishingContent'),
       description: t('FastAndMultiChannelPublishing'),
     },
   ]
@@ -87,12 +87,11 @@ export default function ProductSnapshotCarousel() {
 
       <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
         <div className="flex items-center justify-between border-b border-gray-200 px-4 py-3">
-          <div className="flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
-          </div>
-          <div className="text-xs text-slate-500">Product snapshot</div>
+          {current?.title && (
+            <div className="text-center text-base font-semibold text-slate-900">
+              {current.title}
+            </div>
+          )}
         </div>
 
         <div className="p-2 md:p-1">
@@ -106,12 +105,12 @@ export default function ProductSnapshotCarousel() {
             <CarouselContent>
               {SLIDES.map((s) => (
                 <CarouselItem key={s.src} className="basis-full">
-                  <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-slate-50">
+                  <div className="relative aspect-3/2 w-full overflow-hidden rounded-xl bg-slate-50">
                     <Image
                       src={s.src}
                       alt={s.title}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       sizes="(min-width: 768px) 520px, 100vw"
                       priority={s.src === SLIDES[0].src}
                     />
@@ -126,7 +125,7 @@ export default function ProductSnapshotCarousel() {
                 'z-10',
                 'top-1/2 -translate-y-1/2 border-gray-300 cursor-pointer',
                 // RTL: Previous usually on the right side
-                isRtl ? 'left-3 right-auto' :'right-3 left-auto' ,
+                'left-3 right-auto',
               ].join(' ')}
             />
             <CarouselNext
@@ -134,7 +133,7 @@ export default function ProductSnapshotCarousel() {
                 'z-10',
                 'top-1/2 -translate-y-1/2 border-gray-300 cursor-pointer',
                 // RTL: Next usually on the left side
-                isRtl ? 'right-3 left-auto' :'left-3 right-auto' ,
+                'right-3 left-auto',
               ].join(' ')}
             />
           </Carousel>

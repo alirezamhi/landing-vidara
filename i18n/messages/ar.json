@@ -4,11 +4,16 @@
     "signup": "إنشاء حساب"
   },
    "slider": {
-    "multiAssetsManagementDescription": "إدارة وأرشفة المحتوى الذكية",
-    "SmartSearchAndAdvancedContentDescription": "البحث الذكي والمتقدم في المحتوى",
-    "IntelligentContentProcessingDescription": "المعالجة الذكية للمحتوى",
-    "TeamInteractionAndCollaboration": "التفاعل والتعاون الجماعي",
-    "FastAndMultiChannelPublishing": "النشر السريع ومتعدد القنوات"
+    "multiAssetsManagementDescription": "إدارة متكاملة للأصول الرقمية مع الرفع الجماعي، والمعاينة السريعة، والاستخراج التلقائي للبيانات الوصفية، والتحكم الكامل في الأرشيف وسجل الملفات.",
+    "SmartSearchAndAdvancedContentDescription": "إمكانية البحث الدقيق والذكي عن الأصول من خلال دمج المرشحات النصية والبنيوية، إضافةً إلى البحث اعتمادًا على الصوت أو الصورة أو الفيديو للوصول السريع إلى المحتوى المرتبط في فيدارا.",
+    "IntelligentContentProcessingDescription": "المعالجة الذكية للأصول الصوتية والمرئية، بما في ذلك التفريغ النصي، والتلخيص، والوسم التلقائي واليدوي، وتحويل المحتوى واستخراجه، مع إمكانية مراقبة العمليات وإدارة المخرجات المعالجة.",
+    "TeamInteractionAndCollaboration": "إمكانية التفاعل والتعاون الجماعي على المحتوى من خلال إضافة التعليقات وAnnotations على الإطارات، وإدارة الإصدارات، وتوزيع المهام ضمن لوحة فيدارا.",
+    "FastAndMultiChannelPublishing": "إمكانية النشر السريع ومتعدد القنوات للمحتوى عبر بوابة العلامة التجارية المخصصة، أو مشاركة الروابط أو الشبكات الاجتماعية، مع إدارة حالة النشر وإعداد التقارير.",
+    "MultimediaDocumentManagement": "إدارة مركزية للمحتوى متعدد الوسائط",
+    "SearchAndQuickAccessToContent": "البحث والوصول السريع إلى المحتوى",
+    "IntelligentContentProcessing": "المعالجة الذكية للمحتوى",
+    "TeamInteractionOnContent": "تفاعل الفريق مع المحتوى",
+    "FastAndMultiChannelPublishingContent": "نشر محتوى سريع ومتعدد القنوات"
   },
   "hero": {
     "badge": "منصة SaaS مستقبلية للمؤسسات الإعلامية",

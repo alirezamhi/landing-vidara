@@ -4,11 +4,16 @@
     "signup": "Sign up"
   },
     "slider": {
-    "multiAssetsManagementDescription": "Smart Content Management and Archiving",
-    "SmartSearchAndAdvancedContentDescription": "Smart and Advanced Content Search",
-    "IntelligentContentProcessingDescription": "Intelligent Content Processing",
-    "TeamInteractionAndCollaboration": "Team Interaction and Collaboration",
-    "FastAndMultiChannelPublishing": "Fast and Multi-Channel Publishing"
+    "multiAssetsManagementDescription": "Integrated digital asset management with bulk upload, fast preview, automatic metadata extraction, and full control over the archive and file history.",
+    "SmartSearchAndAdvancedContentDescription": "Accurate and intelligent asset search by combining textual and structural filters, along with audio-, image-, and video-based search for fast access to relevant content in Vidara.",
+    "IntelligentContentProcessingDescription": "Intelligent processing of audio and video assets, including transcription, summarization, automatic and manual tagging, content conversion and extraction, with full process monitoring and management of processed outputs.",
+    "TeamInteractionAndCollaboration": "Team interaction and collaboration on content through comments and frame-level annotations, version management, and task assignment within the Vidara workspace.",
+    "FastAndMultiChannelPublishing": "Fast and multi-channel content publishing through a dedicated brand portal, link or social media sharing, and publication status management with reporting.",
+    "MultimediaDocumentManagement": "Centralized multimedia content management",
+    "SearchAndQuickAccessToContent": "Search and quick access to content",
+    "IntelligentContentProcessing": "Intelligent content processing",
+    "TeamInteractionOnContent": "Team interaction on content",
+    "FastAndMultiChannelPublishingContent": "Fast and multi-channel content publishing"
   },
   "hero": {
     "badge": "Future-ready SaaS for media organizations",

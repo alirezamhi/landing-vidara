@@ -4,6 +4,10 @@
 /* shadcn/tailwind v4 pattern */
 @custom-variant dark (&:is(.dark *));
 
+@theme inline {
+  --font-sans: var(--font-yekan);
+}
+
 /* 1) Raw design tokens (brand) */
 @layer base {
   :root {

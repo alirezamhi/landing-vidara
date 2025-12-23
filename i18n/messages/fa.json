@@ -4,11 +4,16 @@
     "signup": "ثبت‌نام"
   },
   "slider":{
-    "multiAssetsManagementDescription":"مدیریت و آرشیو هوشمند محتوا",
-    "SmartSearchAndAdvancedContentDescription":"جستجوی هوشمند و پیشرفته محتوا",
-    "IntelligentContentProcessingDescription":"پردازش هوشمند محتوا",
-    "TeamInteractionAndCollaboration":"تعامل و همکاری تیمی",
-    "FastAndMultiChannelPublishing":"انتشار سریع و چندکاناله"
+    "multiAssetsManagementDescription":"امکان مدیریت یکپارچه دارایی‌های دیجیتال با آپلود گروهی، پیش‌نمایش سریع، استخراج خودکار متادیتا و کنترل کامل آرشیو و تاریخچه فایل‌ها.",
+    "SmartSearchAndAdvancedContentDescription":"امکان جستجوی دقیق و هوشمند دارایی‌ها با ترکیب فیلترهای متنی و ساختاری، به‌همراه جستجو بر اساس صدا، تصویر یا ویدیو برای دسترسی سریع به محتوای مرتبط در ویدارا.",
+    "IntelligentContentProcessingDescription":"پردازش هوشمند دارایی‌های صوتی و ویدیویی شامل رونوشت، خلاصه‌سازی، تگ‌گذاری خودکار و دستی، تبدیل و استخراج محتوا، با امکان پایش فرایندها و مدیریت خروجی‌های پردازش‌شده.",
+    "TeamInteractionAndCollaboration":"امکان تعامل و همکاری تیمی روی محتوا با ثبت نظر و annotation روی فریم‌ها، مدیریت نسخه‌ها و تخصیص وظایف در کارتابل ویدارا.",
+    "FastAndMultiChannelPublishing":"امکان انتشار سریع و چندکاناله محتوا از طریق پرتال اختصاصی برند، اشتراک‌گذاری لینک یا شبکه‌های اجتماعی و مدیریت وضعیت انتشار همراه با گزارش‌گیری.",
+    "MultimediaDocumentManagement" : "مدیریت متمرکز محتوای چندرسانه‌ای",
+    "SearchAndQuickAccessToContent" : "جستجو و دسترسی سریع به محتوا",
+    "IntelligentContentProcessing" : "پردازش هوشمند محتوا",
+    "TeamInteractionOnContent" : "تعامل تیمی روی محتوا",
+    "FastAndMultiChannelPublishingContent" : "انتشار سریع و چندکاناله"
   },
   "hero": {
     "badge": "پلتفرم SaaS آینده‌نگر برای رسانه",
