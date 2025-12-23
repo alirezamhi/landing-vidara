@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
-import type { ISourceOptions } from '@tsparticles/engine'
+import type { IOptions, RecursivePartial } from "@tsparticles/engine";
 import { loadSlim } from '@tsparticles/slim'
 
 export default function HeroParticles() {
@@ -13,42 +13,36 @@ export default function HeroParticles() {
       await loadSlim(engine)
     }).then(() => setReady(true))
   }, [])
-
-  const options: ISourceOptions = useMemo(
+  const options: RecursivePartial<IOptions> = useMemo(
     () => ({
       fullScreen: { enable: false },
-      background: { color: { value: 'transparent' } },
+      background: { color: { value: "transparent" } },
       fpsLimit: 60,
       detectRetina: true,
-
-      particles: {
-        // خیلی مهم: حتما مقدار number را بده، وگرنه ممکن است چیزی نمایش داده نشود
-        number: { value: 45, density: { enable: true, area: 900 } }, // :contentReference[oaicite:3]{index=3}
-        color: { value: ['#009FD9', '#035370'] },
-        opacity: { value: { min: 0.08, max: 0.22 } },
-        size: { value: { min: 1, max: 3 } },
-        move: { enable: true, speed: 0.6, outModes: { default: 'out' } },
-        links: {
-          enable: true,
-          distance: 140,
-          opacity: 0.14,
-          width: 1,
-          color: '#009FD9',
-        },
-      },
-
       interactivity: {
         events: {
-          resize: true,
-          onHover: { enable: true, mode: 'grab' },
+          onHover: { enable: true, mode: "repulse" },
+          onClick: { enable: true, mode: "push" },
+          // اینجا مهم است:
+          resize: { enable: true },
         },
         modes: {
-          grab: { distance: 180, links: { opacity: 0.18 } },
+          repulse: { distance: 100, duration: 0.4 },
+          push: { quantity: 2 },
         },
+      },
+      particles: {
+        number: { value: 40, density: { enable: true, area: 800 } },
+        color: { value: ["#ffffff"] },
+        opacity: { value: 0.2 },
+        size: { value: { min: 1, max: 3 } },
+        move: { enable: true, speed: 1, direction: "none", outModes: { default: "out" } },
+        links: { enable: true, distance: 120, opacity: 0.15 },
       },
     }),
     []
-  )
+  );
+
 
   if (!ready) return null
 
