@@ -21,6 +21,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === 'en' ? 'ltr' : 'rtl'} className={yekanBakhFaNum.variable}>
+      <head>
+        <link rel="icon" href="/favicon.ico"/>
+        <title>vidara</title>
+      </head>
       <body className="min-h-screen bg-background text-foreground font-sans antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
