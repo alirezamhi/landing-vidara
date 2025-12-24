@@ -13,7 +13,6 @@ import Link from 'next/link'
 import { locales } from '@/i18n/config'
 import Image from 'next/image'
 
-const APP_URL = 'https://vidara.media'
 
 function switchLocalePath(pathname: string, nextLocale: string) {
   const segments = pathname.split('/').filter(Boolean)

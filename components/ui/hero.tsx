@@ -31,7 +31,7 @@ export default function Hero() {
             {t('badge')}
           </p>
 
-          <h1 className="whitespace-nowrap text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
+          <h1 className="text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
             {t('title')}
           </h1>
 
