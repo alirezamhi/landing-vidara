@@ -16,6 +16,11 @@ export default function Footer() {
             <a className="hover:text-slate-900" href="#">{t('privacy')}</a>
             <a className="hover:text-slate-900" href="#">{t('terms')}</a>
           </div>
+          <a referrerPolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=701464&Code=wi7uOR9JzKGG13q8UL0n5LcCVbAX3sb0'>
+        <img referrerPolicy='origin' 
+          src='https://trustseal.enamad.ir/logo.aspx?id=701464&Code=wi7uOR9JzKGG13q8UL0n5LcCVbAX3sb0' 
+          alt='' style={{cursor:"pointer"}} data-code='wi7uOR9JzKGG13q8UL0n5LcCVbAX3sb0'/>
+      </a>
         </div>
       </div>
     </footer>

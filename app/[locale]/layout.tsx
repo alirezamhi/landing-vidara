@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { locales } from '@/i18n/config' // دقت: i18n نه i18m
 import { yekanBakhFaNum } from '@/src/lib/fonts'
+import Script from "next/script";
 
 type Params = Promise<{ locale: string }>
 
@@ -29,6 +30,14 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
+
+        <Script
+          id="goftino-widget"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(){var i="A8Nkqj",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();`,
+          }}
+        />
       </body>
     </html>
   )
